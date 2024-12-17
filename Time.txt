@@ -1,0 +1,49 @@
+
+CLOCKS_PER_SEC = 1000000
+
+n = 1000000
+
+TIME REPORT IN G1 .............
+
+Cost of Addition in G1 = 0.00533766 ms
+
+Cost of Subtraction in G1 = 0.00476193 ms
+
+Cost of scalar-Multiplication in G1 = 0.9353 ms
+
+Cost of Point Negation in G1 = 0.000381702 ms
+
+TIME REPORT IN G2 .............
+
+Cost of Addition in G2 = 0.00476424 ms
+
+Cost of Subtraction in G2 = 0.00460129 ms
+
+Cost of scalar-Multiplication in G2 = 0.932691 ms
+
+Cost of Point Negation in G2 = 0.000383697 ms
+
+TIME REPORT IN GT .............
+
+Cost of Multiplication in GT = 0.00130943 ms
+
+Cost of Inverse in GT = 0.00489106 ms
+
+Cost of Exponentiation in GT = 0.0892997 ms
+
+TIME REPORT IN Zr .............
+
+Cost of Addition in Zr = 0.000371999 ms
+
+Cost of Subtraction in Zr = 0.000274631 ms
+
+Cost of Multiplication in Zr = 0.000369991 ms
+
+Cost of Division in Zr = 0.00202928 ms
+
+Cost of Multiplicative-Inverse in Zr = 0.00135089 ms
+
+Cost of Exponentiation in Zr = 0.00717314 ms
+
+BILINEAR PAIRING.....
+Pairing Cost = 0.708857 ms
