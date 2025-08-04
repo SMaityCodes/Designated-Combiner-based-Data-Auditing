@@ -48,16 +48,9 @@ Designated Combiner based Data Auditing
 - PBC Library
 
 In order to install PBC from [here](https://github.com/wellsaid/pbc-0.5.14): A Pairing Based Cryptography Libaray
-```
-sudo apt-cache pkgnames | grep -i crypto++
-sudo apt-get install libcrypto++-utils
-sudo apt-get install libcrypto++8
-sudo apt-get install libcrypto++-dev
-sudo apt-get install libcrypto++-doc
-```
 
 ## 🚀 How to Use This Repository?
-You can test it in three different systems connected by a network - one system working as the Admin-KGC-CSP, one acting as the auditor and the other one acting as the auditee. However, you can also test it on a single system (in different terminals). Our files are written assuming the testing to be done on same system. Make the changes accordingly if you test on different systems.
+You can test it in three different systems connected by a network - for simplicity, one system working as the Admin-KGC-CSP, one acting as the auditor and the other one acting as the auditee. However, you can also test it on a single system (in different terminals). Our files are written assuming the testing to be done on same system. Make the changes accordingly if you test on different systems.
 
 - clone the repository
 - copy the "Admin-KGC-CSP" directory into the Admin-KGC-CSP system
