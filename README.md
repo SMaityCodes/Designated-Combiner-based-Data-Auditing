@@ -66,7 +66,7 @@ You can test it in three different systems connected by a network - for simplici
       chmod +x DataAudit
       make
       ```
-    - the above will generate the admin's master-secret-key *MSK.bin*, the public parameters *localParams.bin*, the key-pairs for designated combiner as *dc_full_private_key.bin*  *dc_public_key.bin* and the data owner(CSP) as *csp_full_private_key.bin* *csp_public_key.bin*, the file information to audit using *file_info.txt* and the *metadata* of the data-file using *sigma.bin*
+    - the above will generate the admin's master-secret-key *MSK.bin*, the public parameters *localParams.bin*, the key-pairs for designated combiner as *dc_full_private_key.bin*,  *dc_public_key.bin* and the data owner(CSP) as *csp_full_private_key.bin*, *csp_public_key.bin*, the file information to audit using *file_info.txt* and the *metadata* of the data-file using *sigma.bin*
     - copy the *dc_full_private_key.bin* (Designated Combiner Full Private Key), *csp_public_key.bin* (Data Owner Public Key) and *sigma.bin* from "Admin-KGC-CSP" to "Auditee" directories
     - copy the *csp_public_key.bin* (Data Owner Public Key), *dc_public_key.bin* (Designated Combiner Public Key), *localparams.bin*, *file_info.txt* from "Admin-KGC-CSP" to "Auditor" 
 
@@ -121,7 +121,6 @@ To check the correctness of our simulated Attack program, we have the `filecompa
 ```
 ./fileCompare <filename1> <filename2> <blocksize>
 ```
-
 
 For example:-
 ```
