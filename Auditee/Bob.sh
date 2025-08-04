@@ -2,7 +2,7 @@
 
 #!/bin/bash
 MY_PORT=22262
-ALICE_IP="172.21.11.149"
+ALICE_IP="127.0.0.1"
 ALICE_PORT=22261
 
 # Define the input file as a variable
