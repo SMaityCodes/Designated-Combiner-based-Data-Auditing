@@ -66,9 +66,10 @@ You can test it in three different systems connected by a network - for simplici
       chmod +x DataAudit
       make
       ```
-    - the above will generate the admin's master-secret-key *MSK.bin*, the public parameters *localParams.bin* and the *metadata* of the data-file using *sigma.bin*
-    - copy the params file (`Params.bin`) to both "Aditor" and "Auditee" directories
-    - copy only the *metadata* file (`metaData.bin`) to "Aditor" dir only
+    - the above will generate the admin's master-secret-key *MSK.bin*, the public parameters *localParams.bin*, the key-pairs for designated combiner as *dc_full_private_key.bin*  *dc_public_key.bin* and the data owner(CSP) as *csp_full_private_key.bin* *csp_public_key.bin*, the file information to audit using *file_info.txt* and the *metadata* of the data-file using *sigma.bin*
+    - copy the *dc_full_private_key.bin* (Designated Combiner Full Private Key), *csp_public_key.bin* (Data Owner Public Key) and *sigma.bin* from "Admin-KGC-CSP" to "Auditee" directories
+    - copy the *csp_public_key.bin* (Data Owner Public Key), *dc_public_key.bin* (Designated Combiner Public Key), *localparams.bin*, *file_info.txt* from "Admin-KGC-CSP" to "Auditor" 
+
 - Go inside "Auditor" dir:-
     - set the Auditee’s IP address inside `Alice.sh` (set `127.0.0.1` for localhost)
     - run the following command on a terminal opened inside the dir:-
@@ -101,27 +102,18 @@ Now, we'll test the impact of attack. For this purpose we'll invoke our simulate
     - `./Attack <filename> <attack_proportion> <blocksize>` 
     - For example :
       ```
-        ./Attack 15MBData.csv  0.01 2000
+        ./Attack in.ods  0.01 1000
     ```
     - where:-
-        - the data-file name is '15MBData.csv'
-        - blocksize = 2000 (bytes) and,
+        - the data-file name is 'in.ods'
+        - blocksize = 1000 (bytes) and,
         - attack_proportion = 0.01
 
 Attack should be immediately detected at the Auditor's terminal. 
 
 To restore the original data-file run the following command:-
 
- `cp 15MBData2.csv 15MBData.csv`
-
-## 🛠️ Observing Statistics
-
-In each of the directories : "Auditor", "Auditee" and "CSP-Admin" - a `Statistics.txt` file will be generated. These files will report the  execution times of each instance of the following algorithms:-
-
-- Setup Time
-- Average Tag Generation Time (for one block) 
-- Proof Generation Time (excluding Disk I/O and chellenge-vector generation time)
-- Proof Verification Time (excluding Disk I/O and chellenge-vector generation time)
+ `cp in2.ods in.ods`
 
 ## 🔨 Verifying the Correctness of the Simulated Attack-tool
 
@@ -133,7 +125,7 @@ To check the correctness of our simulated Attack program, we have the `filecompa
 
 For example:-
 ```
-./fileCompare 15MBData.csv 15MBData2.csv 2000
+./fileCompare in.ods in2.ods 1000
 ```
 Note that file1 and file2 must be of the same size.
 
@@ -150,9 +142,6 @@ Although our repository is pre-compiled, you may still compile the source codes 
 make clean
 make
 ```
-## 🧩 Experimentation
-
-In order to perform experimentataion with our developped software we have also provided a set of SHELL scripts kept inside the "Experimentation Scripts" directory. You may use these scripts to measure the accuracy of attack detection or, the average execution time of the different algorithms for different protocol configuration parameters or, for different attack intensities or different file-sizes etc.
 
 ## 🙌 Credits:-
 
