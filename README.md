@@ -39,7 +39,7 @@ Designated Combiner based Data Auditing
     └── Makefile
 
 ```
-**Note**: the copies of the `in.ods` and `a.param` files in all three directories - "Admin-KGC-CSP", "Auditee" and "Source Codes" must be consistent.
+**Note**: the copies of the `a.param` file in all four directories - "Admin-KGC-CSP", "Auditee", "Auditor" and "Source Codes" while `in.ods` file in all three directories - "Admin-KGC-CSP", "Auditee" and "Source Codes" must be consistent.
 
 ## ⚙️ Prerequisite:-
 
@@ -47,7 +47,7 @@ Designated Combiner based Data Auditing
 - GNU Compiler Collection (GCC)
 - PBC Library
 
-In order to install PBC, run the following:-
+In order to install PBC from [here](https://github.com/wellsaid/pbc-0.5.14): A Pairing Based Cryptography Libaray
 ```
 sudo apt-cache pkgnames | grep -i crypto++
 sudo apt-get install libcrypto++-utils
