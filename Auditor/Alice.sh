@@ -2,7 +2,7 @@
 
 #!/bin/bash
 MY_PORT=22261
-BOB_IP="172.17.15.9"
+BOB_IP="127.0.0.1"
 BOB_PORT=22262
 counter=1
 
